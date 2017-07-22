@@ -1,0 +1,40 @@
+<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <div id="movie" > 
+      <h3>Movie</h3>
+      <table>
+      <tr><td> <label>Enter Movie Name</label></td><td>
+      <input type="text" name="name" placeholder="Enter the name" ng-model="moviTitle"/></td></tr>
+      <tr><td><label>Enter Year</label></td><td>
+<input type="text" name="name" placeholder="Enter the year" ng-model="moviYear"></td></tr>
+<tr><td><label>Select Language</label></td><td>
+<select id="Ultra">
+  <option value="hi">Hindi</option>
+  <option value="ta">Tamil</option>
+  <option value="ml">Malayam</option>
+  <option value="te">Telugu</option>
+  <option value="en">English</option>
+</select></td></tr>
+<tr><td colspan="2" align="center">
+<button ng-click="get()">Get</button></td></tr>
+
+<div>
+<table>
+ 
+  <tr ng-repeat="dt in mo ">
+  <td>{{dt.title}}</td> 
+  <td>{{dt.release_date}}</td>
+  <td><button ng-click="Edit(dt)">Add to backend</button></td></tr></table></div></table></div>
+  <div ng-show="data">
+  <table class="table table-bordered table-hover">
+      
+            <tr ng-repeat="dt in details">      
+            <td>{{dt.moviTitle}}</td>
+           
+            <td><img src="{{dt.moviPoster}}" style="width:100px;height:100px;"/></td>
+            <td>{{dt.moviYear}}</td>
+            
+  <td><button ng-click="Removem(dt)" class="btn btn-danger">Delete Data</button></td>
+
+  </tr>
+</table></div>
+</div>

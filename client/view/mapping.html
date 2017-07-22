@@ -1,0 +1,68 @@
+<!-- <div id="menu1" class="tab-pane fade" > -->
+<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<div id="mapping">
+      <h3>Mapping</h3>
+      
+       <table>
+        <tr>
+        <td><label>Select Movie Name</label></td>
+        <td><select   ng-model="mp.movieTitle">
+              <option ng-repeat="dt in details1" value ="{{dt.moviTitle}}">
+                      {{dt.moviTitle}}
+              </option>
+            </select></td>
+        </tr>
+
+        <tr>
+        <td><label>Select Theatre city</label></td>
+        <td><select   ng-model="mp.cityName">
+              <option ng-repeat="dt in details2" value ="{{dt.City}}">
+                      {{dt.City}}
+              </option>
+            </select></td>
+        </tr>
+        <tr>
+        <td><label>Select Theatre </label></td>
+        <td><select   ng-model="mp.theatreName">
+              <option ng-repeat="dt in details3|filter:mp.cityName" value ="{{dt.theatreName}}">
+                      {{dt.theatreName}}
+              </option>
+            </select></td>
+        </tr>
+        <tr>
+        <td><label>Select Showtime </label></td>
+        <td><select   ng-model="mp.showTime">
+              <option ng-repeat="dt in details4" value ="{{dt.showTimings}}">
+                      {{dt.showTimings}}
+              </option>
+            </select></td>
+        </tr>
+        <tr>
+        <td><label>Enter From Date</label></td>
+        <td><input  type="text" name="fd"  placeholder="Enter From Date" ng-model="mp.fromDate" required/></td>
+        </tr>
+        <tr>
+        <td><label>Enter To Date</label></td>
+        <td><input  type="text" name="td"  placeholder="Enter To Date" ng-model="mp.toDate" required/></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="Submit" ng-click="Addmp()" class="btn btn-success"/></td>
+        <td><input type="button" value="Update" ng-click="updatemp()" class="btn btn-primary" /></td>
+        </tr></table>
+
+      <div ng-show="data">
+      <table class="table table-bordered table-hover">
+      <tr ng-repeat="dt in details">   
+    
+      <td>{{dt.movieTitle}}</td>
+      <td>{{dt.cityName}}</td>
+      <td>{{dt.theatreName}}</td>
+      <td>{{dt.showTime}}</td>
+      <td>{{dt.fromDate}}</td>
+      <td>{{dt.toDate}}</td>
+    <!--   <td>{{dt.moviPoster}}</td> -->
+    <td><img src="{{dt.moviPoster}}" style="width:100px;height:100px;"></td>
+      <td><button ng-click="Editmp(dt)" class="btn btn-primary">Edit Data</button></td>
+      <td><button ng-click="Removemp(dt)" class="btn btn-danger">Delete Data</button></td>
+      </tr>
+    </table></div>

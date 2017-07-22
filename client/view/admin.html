@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script> -->
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BioSCOPE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active">
+      <a href="#">Home</a>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+        
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a><input type="text" name="g" class="fa fa-search"/></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+    <table><tr width="100%">
+        <td><img src="D:/Bioscope/client/view/images/m3.jpg" height="250px" width="350px"/></td>
+        <td><img src="D:/Bioscope/client/view/images/m1.jpg" height="250px" width="750px"/></td>
+        <td><img src="D:/Bioscope/client/view/images/m2.jpg" height="250px" width="250px"/></td>
+        </tr></table>
+    <!--<center>
+  <img src="C:/Users/Administrator/Desktop/m1.jpg" height="250px" width="750px"/></center>-->
+<div class="container">
+  <h2>BioScope</h2>
+  
+  <ul class="nav nav-pills">
+    <li class="active">
+    <a data-toggle="pill" href="#home">City</a></li>
+    <li><a data-toggle="pill" href="#menu1">Theatre</a></li>
+    <li><a data-toggle="pill" href="#menu2">Movie</a></li>
+    <li><a data-toggle="pill" href="#menu3">Timing</a></li>
+    <li><a data-toggle="pill" href="#menu4">Mapping</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>City</h3>
+        <label>Enter City</label>
+        <input type="text" name="City" placeholder="Enter City Name" ng-model="c.City"/>
+        <input type="button" value="Submit" ng-click="Addc()"/>
+        <td><input type="button" value="Update" ng-click="updatec()"/></td>
+        <div ng-show="data">
+    <table>
+      
+            <tr ng-repeat="dt in details">      
+      <td>{{dt.City}}</td>
+           <td><button ng-click="Editc(dt)">Edit Data</button></td>
+        <td><button ng-click="Removec(dt)">Delete Data</button></td>
+      </tr>
+    </table>
+    </div>
+     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+    </div>
+    <div id="menu1" class="tab-pane fade" >
+      <h3>Theatre</h3>
+      
+         <label>Enter Theatre Name</label>
+        <input type="text" name="Theatrename" placeholder="Enter Theatre Name" ng-model="th.theatreName"/>
+        <input type="text" name="Theatreseats" placeholder="Enter Theatre Name" ng-model="th.theatreSeats"/>
+        <input type="text" name="Theatretp" placeholder="Enter Theatre Name" ng-model="th.ticketPrice"/>
+        <input type="text" name="Theatrecn" placeholder="Enter Theatre Name" ng-model="th.cityName"/>
+        <input type="button" value="Submit" ng-click="Addth()"/>
+        <td><input type="button" value="Update" ng-click="updateth()"/></td>
+            <div ng-show="data">
+    <table>
+      <tr>       
+        <td>Theatre</td>     
+      </tr>
+      <tr ng-repeat="dt in details">      
+      <td>{{dt.Theatre}}</td>
+           <td><button ng-click="Editth(dt)">Edit Data</button></td>
+        <td><button ng-click="Removeth(dt)">Delete Data</button></td>
+      </tr>
+    </table>
+    </div>
+    <!--  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Movie</h3>    
+        <label>Enter Movie Name</label>
+        <input type="text" name="Moviet" placeholder="Enter movie Name" ng-model="m.moviTitle"/>
+        <input type="text" name="Moviel" placeholder="Enter movie Name" ng-model="m.moviLanguage"/>
+        <input type="text" name="Movieg" placeholder="Enter movie Name" ng-model="m.moviGenre"/>
+        <input type="text" name="Moviep" placeholder="Enter movie Name" ng-model="m.moviPoster"/>
+        <input type="text" name="Movied" placeholder="Enter movie Name" ng-model="m.moviDirector"/>
+        <input type="text" name="Moviea" placeholder="Enter movie Name" ng-model="m.moviActors"/>
+        <input type="button" value="Submit" ng-click="Addm()"/>
+        <td><input type="button" value="Update" ng-click="updatem()"/></td>
+            <div ng-show="data">
+    <table>
+      <tr>       
+        <td>Movie</td>  
+      </tr>
+      <tr ng-repeat="dt in details">      
+      <td>{{dt.Movie}}</td>     
+      <td><button ng-click="Editm(dt)">Edit Data</button></td>
+        <td><button ng-click="Removem(dt)">Delete Data</button></td>
+      </tr>
+    </table>
+    </div>
+      <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>-->
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Timing</h3>
+         <label>Enter Timing</label>
+        <input type="text" name="Timings" placeholder="Enter timing" ng-model="t.TshowTimings"/>
+        <input type="text" name="Timingn" placeholder="Enter timing" ng-model="t.theatreName"/>
+        <input type="button" value="Submit" ng-click="Addt()"/>
+        <td><input type="button" value="Update" ng-click="updatet()"/></td>
+            <div ng-show="data">
+    <table>
+      <tr>
+        <td>Timing</td>
+      </tr>
+      <tr ng-repeat="dt in details">
+      <td>{{dt.Timing}}</td>
+      <td><button ng-click="Editt(dt)">Edit Data</button></td>
+        <td><button ng-click="Removet(dt)">Delete Data</button></td>
+      </tr>
+    </table>
+    </div>
+      <!--<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>-->
+    </div>
+      <div id="menu4" class="tab-pane fade">
+      <h3>Mapping</h3>
+        
+      <!--<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>-->
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

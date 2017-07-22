@@ -1,0 +1,33 @@
+<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <div id="movie" > 
+      <h3>Movie</h3>
+        <label>Enter Movie Name</label>
+        <input type="text" name="mn" placeholder="Enter Movie Name" ng-model="m.moviTitle" required/><br><br>
+         <label>Enter Movie Language</label>
+        <input type="text" name="ml" placeholder="Enter Movie Language" ng-model="m.moviLanguage" required/><br><br>
+        <label>Enter Movie Type</label>
+        <input type="text" name="mt" placeholder="Enter Movie Type" ng-model="m.moviGenre" required/><br><br>
+        <label>Choose Movie Poster</label>
+        <input  type="text" name="mp"  placeholder="Enter Movie Language" ng-model="m.moviPoster" required/><br><br>
+        <label>Enter Movie Director</label>
+        <input type="text" name="md" placeholder="Enter Movie Director" ng-model="m.moviDirector" required/><br><br>
+        <label>Enter Movie Actor</label>
+        <input type="text" name="ma" placeholder="Enter Movie Actor" ng-model="m.moviActor" required/><br><br>
+        <input type="button" value="Submit" ng-click="Addm()" class="btn btn-success"/>
+        <td><input type="button" value="Update" ng-click="updatem()" class="btn btn-primary"/></td>
+        <div ng-show="data">
+    <table class="table table-bordered table-hover">
+      
+            <tr ng-repeat="dt in details">      
+            <td>{{dt.moviTitle}}</td>
+            <td>{{dt.moviLanguage}}</td>
+            <td>{{dt.moviGenre}}</td>
+            <td><img ng-src={{dt.moviPoster}}/></td>
+            <td>{{dt.moviDirector}}</td>
+            <td>{{dt.moviActor}}</td>
+
+           <td><button ng-click="Editm(dt)" class="btn btn-primary">Edit Data</button></td>
+        <td><button ng-click="Removem(dt)" class="btn btn-danger">Delete Data</button></td>
+      </tr>
+    </table>
+    </div>

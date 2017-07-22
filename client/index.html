@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="expressapp">
+<head>
+  <title>Movie Booking APP</title>
+
+  <script type="text/javascript" src="./public/js/angular.min.js"></script>
+  <script type="text/javascript" src="./public/js/angular-route.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+   <script type="text/javascript" src="./controller/cityController.js"></script>
+    <script type="text/javascript" src="./controller/theatreController.js"></script>
+    <!-- <script type="text/javascript" src="./controller/movieController.js"></script>-->
+    <script type="text/javascript" src="./controller/m2c.js"></script>
+     <script type="text/javascript" src="./controller/timingController.js"></script>
+     <script type="text/javascript" src="./controller/mappingController.js"></script>
+     <script type="text/javascript" src="./controller/registerController.js"></script>
+     <script type="text/javascript" src="./controller/loginController.js"></script>
+     <script type="text/javascript" src="./controller/bookingController.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app="expressapp">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BioSCOPE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active">
+      <a href="#home">Home</a>
+      </li>
+      <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a> -->
+        <!-- <ul class="dropdown-menu"> -->
+          <li><a href="#city">City</a></li>
+          <li><a href="#theatre">Theatre</a></li>
+          <li><a href="#timing">Timing</a></li>
+          <li><a href="#movie">Movie</a></li>
+          <li><a href="#mapping">Mapping</a></li>
+          <li><a href="#booking">Booking</a></li>
+        <!-- </ul>
+      </li>
+      <li><a href="#">Page 2</a></li> -->
+        
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+   <li><a> <div class="col-sm-50">
+        <input type="text" class="form-control" id="inputSuccess">
+        <span class="glyphicon glyphicon-search form-control-feedback" style="    margin-top: 7%;
+    margin-right: 8%;
+    color: #333;"></span></input>
+      </div></a></li> 
+      <li><a href="#register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div ng-view>
+</div>
+<!-- <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter"> Acknowledgement</div>
+        <p>This Project Designed and Developed By Ruchik Gaikwad submitted in the partial fulfilment of the cretificate of diploma in MEAN stack at NIIT PUNE DECCAN. Thanking TechMentors And Expert Faculty for their supprot.</p>
+        <p><i class="glyphicon glyphicon-map-pin"></i> 9/777 Lodhi Colony New Delhi -110003, INDIA</p>
+        <p><i class="fa fa-phone"></i> Phone (India) : +91 9013852240</p>
+        <p><i class="fa fa-envelope"></i> E-mail : ruchik.gaikwad@gmail.com</p>
+
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a> Career</a></li>
+          <li><a> Privacy Policy</a></li>
+          <li><a> Terms And Conditions</a></li>
+          <li><a> Client Gateway</a></li>
+          <li><a> Ranking</a></li>
+          <li><a> Case Studies</a></li>
+          <li><a> Frequently Ask Questions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">LATEST POST</h6>
+        <div class="post">
+          <p>Added footer to the web App <span>December 25,2016</span></p>
+          <p>Added css to the footer  <span>December 25,2016</span></p>
+          <p>Made Theatre for Admin Controller <span>December 24,2016</span></p>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</footer>
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2016 - All Rights Reserved</p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a>MovieBooking.com</a></li>
+        <li><a>About us</a></li>
+        <li><a>Blog</a></li>
+        <li><a>Faq's</a></li>
+        <li><a>Contact us</a></li>
+        <li><a>Site Map</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+</body>
+</html>
